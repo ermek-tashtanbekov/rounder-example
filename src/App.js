@@ -6,6 +6,7 @@ import About from './componenet/About/About';
 import Contacts from './componenet/Contacts/Contacts';
 import Home from './componenet/Home/Home';
 import NotFound from './componenet/NotFound/NotFound';
+import Posts from './componenet/Posts/Posts';
 
 function App() {
   const activeLInk ={
@@ -17,6 +18,7 @@ function App() {
       <ul>
         <li><NavLink activeStyle={activeLInk} activeClassName="activeLInk" exact to="/">Home</NavLink></li>
         <li><NavLink activeStyle={activeLInk} activeClassName="activeLInk" to="/about">About</NavLink></li>
+        <li><NavLink activeStyle={activeLInk} activeClassName="activeLInk" to="/posts">Posts</NavLink></li>
         <li><NavLink activeStyle={activeLInk} activeClassName="activeLInk" to="/contacts">Contacts</NavLink></li>
       </ul>
 
@@ -29,6 +31,7 @@ function App() {
 
       <Switch>
         <Route path="/about" component={About} />
+        <Route path="/post" component={Posts} />
         <Route path="/contacts" component={Contacts} />
         <Route path="/" component={Home} />
         <Route path="/" component={NotFound} />
